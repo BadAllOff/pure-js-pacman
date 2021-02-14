@@ -56,3 +56,10 @@ html, body {
     background-color: orange;
     border: none;
 }
+.blinky,
+.pinky,
+.inky,
+.clyde{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
