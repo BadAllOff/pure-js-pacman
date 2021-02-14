@@ -117,7 +117,7 @@ function control(e) {
   checkForWin();
   checkForGameOver();
 }
-document.addEventListener("keyup", control);
+document.addEventListener("keydown", control);
 
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {
@@ -214,7 +214,7 @@ function checkForGameOver() {
 }
 
 function checkForWin() {
-  if (score === 274) {
+  if (score >= 274) {
     ghosts.forEach((ghost) => clearInterval(ghost.timerId));
     document.removeEventListener("keyup", control);
     scoreDisplay.innerHTML = "You WON!";
